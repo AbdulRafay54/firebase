@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    body {
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .quiz-container {
+      width: 90%;
+      max-width: 600px;
+      background-color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      border-radius: 10px;
+      box-sizing: border-box;
+      padding: 20px 30px;
+      margin: auto;
+    }
+    #quiz-body {
+      width: 100%;
+    }
+    #quiz-body > h1 {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 800;
+      margin: 10px 0 30px 0;
+    }
+    .qu-head {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .qu-no {
+      font-size: 25px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .objective-content {
+      gap: 10px;
+    }
+    .question-cont {
+      display: flex;
+      align-items: baseline;
+    }
+    .question-cont > span {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+    .question-cont > #question {
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: 600;
+    }
+    #option-cont {
+      margin-top: 15px;
+    }
+    .option {
+      display: block;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #c0c0c0;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    .option:hover {
+      background-color: #f0f0f0;
+    }
+    #next-Btn {
+      padding: 10px 15px;
+      border-radius: 20px;
+      border: 0;
+      outline: 0;
+      background: teal;
+      color: white;
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      display: block;
+      margin: 20px auto 0;
+    }
+    #next-Btn:active {
+      box-shadow: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <article id="quiz-body">
+      <h1 id="quiz-category-name">HTML Quiz</h1>
+      <div class="qu-head">
+        <div class="qu-no">
+          <i class="fa-regular fa-circle-question"></i>
+          <p>Question no <span id="qu-number">1</span></p>
+        </div>
+      </div>
+      <div class="objective-content">
+        <div class="question-cont">
+          <span>Q:-</span>
+          <p id="question">What is the full form of HTML?</p>
+        </div>
+        <div id="option-cont">
+          <label class="option">
+            <input type="radio" name="option" value="0" /> Hyper Text Markup
+            Language
+          </label>
+          <label class="option">
+            <input type="radio" name="option" value="1" /> Hyperlinks and Text
+            Markup Language
+          </label>
+          <label class="option">
+            <input type="radio" name="option" value="2" /> Home Tool Markup
+            Language
+          </label>
+          <label class="option">
+            <input type="radio" name="option" value="3" /> Hyperlinking Text
+            Markup Language
+          </label>
+        </div>
+        <button id="next-Btn">Next</button>
+      </div>
+    </article>
+  </div>
+  <script src="./app.js" type="module"></script>
+</body>
+</html>
